@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:ems="10"
+        android:text="搜索时使用一个新的窗口，而不是直接显示搜索框"
+        android:id="@+id/setting_windowsearch" />
+
+    <CheckBox
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:ems="10"
+        android:text="使用新线程执行我的脚本"
+        android:id="@+id/setting_thread" />
+
+    <CheckBox
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:ems="10"
+        android:text="是否显示悬浮窗(但会执行自定义脚本)"
+        android:id="@+id/setting_float" />
+
+    <CheckBox
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:ems="10"
+        android:text="是否显示系统应用"
+        android:id="@+id/setting_sysapp" />
+
+    <CheckBox
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:ems="10"
+        android:text="旋转六芒星？"
+        android:id="@+id/setting_rotate" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:ems="10"
+        android:id="@+id/setting_windowsize" />
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="预览"
+        android:id="@+id/preview" />
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="保存"
+        android:id="@+id/ok" />
+
+</LinearLayout>
+

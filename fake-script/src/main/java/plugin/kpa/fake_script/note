@@ -1,0 +1,12 @@
+fakescript研究
+
+一.
+1.调用java函数，具体绑定的方法在fk类的 public static void reg(fake f, String packagename) 方法中
+    01.在开始时通过fk对象调用reg方法注册所有 packagename下的类的 方法
+    02.绑定java函数时，如果是static的，就是类名+.+方法名如果不是static的,注意，没有点完整类名+方法名
+
+
+二.修改
+1.修改 variant类的加法操作，添加字符串相加，非整数的会被转成字符串相加	public void plus(variant l, variant r) throws Exception
+2.buildinfunc里有内置函数，要使用需要调用fk的openbaselib函数
+3.添加调用构造函数的con内置函数,imp导入类的方法的imp函数

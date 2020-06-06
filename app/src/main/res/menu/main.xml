@@ -1,0 +1,33 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/register"
+        android:title="注册" />
+    <item
+        android:id="@+id/script"
+        android:title="脚本" />
+
+
+    <item
+        android:id="@+id/exit"
+        android:title="退出" />
+
+    <item
+        android:id="@+id/about"
+        android:title="关于" />
+
+    <item
+        android:id="@+id/group"
+        android:title="QQ群" />
+    <item
+        android:id="@+id/setting"
+        android:title="设置" />
+
+    <item
+        android:id="@+id/update"
+        android:title="更新" />
+
+</menu>
+

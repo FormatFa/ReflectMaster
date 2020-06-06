@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<pre>
+
+      1.9_2019-1-27
+     1.更换格格脚本为FakeScript
+      2.替换五角星为六芒星
+      3.显示系统应用
+     4.新增若干未知bug
+
+      1.8_2018-11-23
+     1.去除加固功能
+      2.添加快速修改文字按钮
+      3.其他待更新
+
+
+       1.7_2018-5-30
+     1.可以获取数组
+      2.执行脚本时找不到类
+      3.控制台输出限制在200行
+
+     1.6_2018-5-12
+     1.修复加载不了类....
+     2.构造函数查看
+
+     1.5_2018-5-7
+     1.修复我的脚本不能加载apk类
+     2.执行脚本可在新线程里执行
+
+     1.4_2018-5-4（青年节)2
+     1.更新自定义hook指定函数并执行自定义代码
+
+
+     1.3 小更新_2018-4-30
+     1.测试脚本输出兰可滑动
+     2.修复脚本加载不了目标apk的类
+     3.脚本可读取临时变量
+
+
+     1.2更新说明——2018.4-29
+
+     0.可对对话框处理，之前是被对话框覆盖，现在被对话框覆盖后按音量-即可启动新悬浮窗
+     1.集成格格脚本测试
+     2.增加退出按钮
+     3.新增搜索功能
+     4.在在反射大师里面时，默认启动放射大师，即hook自己（这个不需要xposed，仅供测试)
+ </pre>
+
+
+<h2>注册说明</h2>
+未注册版本可使用:<br/>
+列表显示常见变量值<br/>
+activity启动<br/>
+布局查看<br/><br/><br/>
+注册版本可使用:
+修改变量<br/>
+运行函数<br/>
+
+
+<h2>1.关于反射大师</h2>
+反射大师是一个Xposed模块，使用软件前请先安装Xposed模块,
+<br>切勿恶意修改本软件，不然会造成手机数据意料之外的损失<br>
+
+启动View查看后，想关闭窗口的直接长安界面，就会关闭
+<h2>3.关于作者</h2>
+QQ:2049896440
+使用到的开源库:FakeScript:
+
+https://github.com/esrrhs/fakescript-java/
+
+
+<pre>
+
+     1.9_2019-1-27
+     1.更换格格脚本为FakeScript
+      2.替换五角星为六芒星
+      3.显示系统应用
+     4.新增若干未知bug
+
+
+一.脚本编写
+1.hook脚本
+
+在定义hook里添加要hook的函数，编写代码
+可以使用!开头直接指定路径 或者 写下面的:
+func hook(obj)
+
+end
+
+obj为MethodHookParam param,通过obj获取hook的函数的参数
+var para = fld(obj,"args [Ljava.lang.Object;")
+io.xplog(para)
+
+函数说明,io类下的
+xplog(Object obj)使用XposedBridge.log打印日志到logcat
+readbytes(String path)读取文件内容,返回byte数组
+readstring(String path)读取文件内容，返回string
+exists(Object path)判断文件存在，返回1存在
+writefile(String path,Object obj) 写入文件，任意类型，第一个参数为路径
+sleep(millis)休眠毫秒，1秒=1000毫秒,在反射大师的设置里开启在新线程执行后使用
+
+rf类下（在脚本里执行，hook里用不了）
+public static Object getThis()获取当前对象
+		public static Context getAct()获取当前context
+		public static void copy(Object string) 复制到剪切板
+		public static void print(Object obj) 输出到脚本执行的结果
+		public static Object getTempVar(int position)获取临时保存的变量，position保存在列表的哪里的
+
+
+2.测试脚本
+
+同上，入口函数为main，无参数
+func main()
+rf.print("123456")
+end
+
+
+3.内置函数
+
+
+setarray设置数组的值 setarray(obj,1,value)
+
+clsname(obj) 获取对象类名
+sfld(obj,name) 获取静态变量，name由 name+" "+type组成
+
+fld(obj,name) 获取普通变量
+con(string or obj, 参数...)通过类名调用构造函数
+
+new(类名) new 一个对象
+
+imp(类名)导入类的所有方法，要通过对象:方法 调用方法，必须先导入
+setfld(obj,"名字 类型)
+setfld(cls or obj, '名字 类型')
+
+二.脚本来自
+  https://github.com/esrrhs/fakescript-java/
+
+</pre>
+</html>
+
+
+

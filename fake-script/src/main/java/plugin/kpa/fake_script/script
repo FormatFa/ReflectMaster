@@ -1,0 +1,7 @@
+package formatfa.test
+func main()
+
+    MyClass.print("KKKKK")
+    var result = MyClass.test(1,4)
+    MyClass.print(result)
+end

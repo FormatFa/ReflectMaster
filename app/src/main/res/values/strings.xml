@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">反射大师</string>
+
+
+    <string name="about">当前版本:1.9 \n 1.9_2019-1-27\n1.更换格格脚本为FakeScript\n2.替换五角星为六芒星\n3.显示系统应用\n4.新增若干未知bug\n反射大师是一款软件，本软件造成的问题由使用者负责，如果你同意以上要求，请点击同意，否则请点击不同意退出软件</string>
+
+
+</resources>

@@ -1,0 +1,3 @@
+ func main()
+    TestHandle.print("555")
+ end
